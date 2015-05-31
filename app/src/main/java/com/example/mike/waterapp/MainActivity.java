@@ -37,16 +37,19 @@ public class MainActivity extends ActionBarActivity {
     private int numberOfBottles;
     private String waterPercentText;
     private TextView waterPercent;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar)findViewById(R.id.tool_bar);
+        //set up the toolbar to take the place of the actionBar
+        toolbar = (Toolbar)findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
 
         toolbar.setTitle(R.string.app_name);
+
 
         waterPercent = (TextView)findViewById(R.id.water_drunk_text_view);
         Calendar calendar = Calendar.getInstance();
