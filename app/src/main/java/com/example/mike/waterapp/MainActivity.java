@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toolbar;
+import android.support.v7.widget.Toolbar;
 
 import java.util.Calendar;
 
@@ -21,7 +21,7 @@ import java.util.Calendar;
 
  */
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends ActionBarActivity {
     //Only one bottle size (v1)
     //Want to drink only a gallon of water (v1)
     private final int bottleSize = 14;
@@ -42,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = (Toolbar)findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+
+        toolbar.setTitle(R.string.app_name);
 
         waterPercent = (TextView)findViewById(R.id.water_drunk_text_view);
         Calendar calendar = Calendar.getInstance();
@@ -70,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }//end onCreate
+
 
     //When the system is paused, or about to be destroyed, save
     //numberOfBottles and dayOfYear as persistent data. Takes care
