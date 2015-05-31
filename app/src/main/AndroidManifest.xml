@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mike.waterapp">
 
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="22" />
 
     <application
         android:allowBackup="true"

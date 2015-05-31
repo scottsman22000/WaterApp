@@ -21,7 +21,7 @@ import java.util.Calendar;
 
  */
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
     //Only one bottle size (v1)
     //Want to drink only a gallon of water (v1)
     private final int bottleSize = 14;
